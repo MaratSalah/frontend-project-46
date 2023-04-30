@@ -4,4 +4,4 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/0b68aaa82a9c669ca0e7/maintainability)](https://codeclimate.com/github/MaratSalah/frontend-project-46/maintainability)
 
-![example event parameter](https://github.com/MaratSalah/frontend-project-46/actions/workflows/tests.yml/badge.svg?event=push)
+![Tests](https://github.com/MaratSalah/frontend-project-46/actions/workflows/tests.yml/badge.svg?event=push)
