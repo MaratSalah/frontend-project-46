@@ -71,7 +71,7 @@ const diff = (filepath1, filepath2) => {
 
   const result = `{\n  ${notFormattedResult.join('\n  ')}\n}`;
 
-  console.log(result);
+  // console.log(result);
 
   return result;
 };
