@@ -1,4 +1,4 @@
-# file: .github/workflows/hello-world.yml
+# file: .github/workflows/tests.yml
 name: tests
 # on – определяет события, которые запускают воркфлоу
 on: push
@@ -12,7 +12,9 @@ jobs:
       # экшен, выполняет какую-то задачу
       # checkout – клонирует репозиторий
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+
       # run – произвольная bash-команда
       # ls -la выведет содержимое текущего репозитория
-      - run: npx -n --experimental-vm-modules jest
       - run: make lint
+      - run: make test

@@ -1,6 +1,8 @@
-install:
+install: install-deps
+	npx simple-git-hooks
+	
+install-deps:
 	npm ci
-	install-deps npx simple-git-hooks
 
 gendiff:
 	node src/gendiff.js
@@ -11,6 +13,6 @@ publish:
 lint: 
 	npx eslint .
 
-tests:
-	NODE_OPTIONS=--experimental-vm-modules npx jest
+test:
+	npx -n --experimental-vm-modules jest
 	
