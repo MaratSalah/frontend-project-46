@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1683728841789" clover="3.2.0">
-  <project timestamp="1683728841789" name="All files">
+<coverage generated="1683812943786" clover="3.2.0">
+  <project timestamp="1683812943786" name="All files">
     <metrics statements="38" coveredstatements="38" conditionals="22" coveredconditionals="22" methods="4" coveredmethods="4" elements="64" coveredelements="64" complexity="0" loc="38" ncloc="38" packages="1" files="1" classes="1"/>
     <file name="diff.js" path="/home/evo/frontend-project-46/src/diff.js">
       <metrics statements="38" coveredstatements="38" conditionals="22" coveredconditionals="22" methods="4" coveredmethods="4"/>
