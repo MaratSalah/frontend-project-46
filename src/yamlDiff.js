@@ -1,16 +1,17 @@
 import fs from 'node:fs';
 import _ from 'lodash';
 import path from 'node:path';
+import yaml from 'js-yaml';
 
-const jsonDiff = (filepath1, filepath2) => {
+const yamlDiff = (filepath1, filepath2) => {
   const path1 = path.resolve(filepath1);
   const path2 = path.resolve(filepath2);
 
   const strOfFile1 = fs.readFileSync(path1);
   const strOfFile2 = fs.readFileSync(path2);
 
-  const dataOfFile1 = JSON.parse(strOfFile1);
-  const dataOfFile2 = JSON.parse(strOfFile2);
+  const dataOfFile1 = yaml.load(strOfFile1);
+  const dataOfFile2 = yaml.load(strOfFile2);
 
   const keys1 = Object.keys(dataOfFile1);
   const keys2 = Object.keys(dataOfFile2);
@@ -52,4 +53,22 @@ const jsonDiff = (filepath1, filepath2) => {
 
 // yamlDiff('../__fixtures__/file1.yaml', '../__fixtures__/file2.yaml');
 
-export default jsonDiff;
+export default yamlDiff;
+
+/*
+const nonFormattedResult = sortedKeys.map((key) => {
+  const value1 = dataOfFile1[key];
+  const value2 = dataOfFile2[key];
+  if (value1 === value2) {
+    return { symbol: ' ', key, value: value1 };
+  }
+
+  if (Object.hasOwn(dataOfFile1, key) && !Object.hasOwn(dataOfFile2, key)) {
+    return { symbol: '-', key, value: value1 };
+  }
+
+  if (!Object.hasOwn(dataOfFile1, key) && Object.hasOwn(dataOfFile2, key)) {
+    return { symbol: '+', key, value: value2 };
+  }
+
+  return {  }; */

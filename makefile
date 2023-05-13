@@ -5,7 +5,7 @@ install-deps:
 	npm ci
 
 gendiff:
-	node src/gendiff.js
+	node bin/gendiff.js
 
 publish:
 	npm publish --dry-run
