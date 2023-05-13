@@ -1,11 +1,6 @@
-import _ from 'lodash';
 import jsonDiff from './jsonDiff.js';
 import yamlDiff from './yamlDiff.js';
-
-const extensionOfFile = (filepath) => {
-  const extension = _.last(filepath.split('.'));
-  return extension;
-};
+import extensionOfFile from './helpers.js';
 
 const diff = (filepath1, filepath2) => {
   if (extensionOfFile(filepath1) === 'yml' && extensionOfFile(filepath1) === 'yaml') {
