@@ -3,7 +3,7 @@ import yamlDiff from './yamlDiff.js';
 import extensionOfFile from './helpers.js';
 
 const diff = (filepath1, filepath2) => {
-  if (extensionOfFile(filepath1) === 'yml' && extensionOfFile(filepath1) === 'yaml') {
+  if (extensionOfFile(filepath1) === 'yml' || extensionOfFile(filepath1) === 'yaml') {
     return yamlDiff(filepath1, filepath2);
   }
 
